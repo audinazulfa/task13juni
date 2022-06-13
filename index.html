@@ -9,14 +9,20 @@
 </head>
 <body>
     <div class="m-4 shadow p-6 font-bold rounded-lg">
-        <h2 class="mb-3 text-3xl">Tulis Nama Kalian!</h2>
-        <input type="text" class="todo border mr-4 px-6 py-4 rounded-lg" placeholder="masukkan nama">
-        <button onclick="myFunction()">Try It</button>
-        <script>
-            function myFunction() {
-                confirm("Press a button!");
-            }
-        </script>
+        <h2 class="mb-3 text-3xl"></h2>
+        <button id="button" class="bg-red-300 px-3 py-2 font-semibold text-lg rounded-lg">Try It</button>
     </div>
 </body>
-</html></h1>
+
+<script>
+    document.getElementById('button').addEventListener('click', function() {
+        let btn = confirm("Apa Kamu Yakin?")
+
+        if (btn) {
+            alert('Selamat!')
+        } else {
+            alert('Gagal!')
+        }
+    })
+</script>
+</html>
